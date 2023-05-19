@@ -12,24 +12,17 @@ let questions = [
         validate: (text) =>
             text.length <= 3 || "The text cannot be more than 3 chars",
     },
+index.js 
     {
-        name: "textColor",
-        type: "input",
-        message: "Provide  text color"
+        
+    }
+    name: "textColor",
+    type: "input",
+    message:
+        "Give text color for logo, not exceeding 3 chars",
+    validate: (text) =>
+        text.length <= 3 || "The text cannot be more than 3 chars",
     },
-    {
-        name: "shape",
-        type: "list",
-        message: "choose a shape for logo",
-        choices: ["triangle", "square", "circle"],
-    },
-    {
-        name: "logoColor",
-        type: "input",
-        message: "Provide a logo color"
-    },
-];
-
 inquirer.prompt(questions)
     .then(({ text, textColor, logo, logoColor }) => {
         let shape;
