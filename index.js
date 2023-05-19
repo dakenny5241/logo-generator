@@ -12,16 +12,12 @@ let questions = [
         validate: (text) =>
             text.length <= 3 || "The text cannot be more than 3 chars",
     },
-index.js 
     {
-        
-    }
-    name: "textColor",
-    type: "input",
-    message:
-        "Give text color for logo, not exceeding 3 chars",
-    validate: (text) =>
-        text.length <= 3 || "The text cannot be more than 3 chars",
+        name: "textColor",
+        type: "input",
+        message: "Give text color",
+        validate: (textColor) =>
+            textColor.length <= 3 || "The text color cannot be more than 3 chars",
     },
 inquirer.prompt(questions)
     .then(({ text, textColor, logo, logoColor }) => {
