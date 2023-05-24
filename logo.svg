@@ -1,3 +1,2 @@
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="300" height="200"><rect x="90" y="40" width="120" height="120"
-        fill="red" /><text x="150" y="125" text-anchor="middle" fill="green" font-size="65">ken</text>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="300" height="200"><circle cx="150" cy="100" r="80" fill="yellow" /><text x="150" y="125" text-anchor="middle" fill="red" font-size="65">SVG</text>
         </svg>

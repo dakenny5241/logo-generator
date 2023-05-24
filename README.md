@@ -44,7 +44,9 @@ To run tests, run the following command:
 ```
 npm test
 ```
-
+## walkthrough video link:
+ https://drive.google.com/file/d/10f7riJX3opQrhgdt0CWaXLvpQou7KzuZ/view
+ 
 ## Questions
 
 If you have any questions about the repo, open an issue or contact(https://github.com/dakenny5412,
