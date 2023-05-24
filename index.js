@@ -1,5 +1,5 @@
 const inquirer = require('inquirer');
-const logo = require("./lib/logo");
+const Logo = require("./lib/logo");
 const { Circle, Triangle, Square } = require("./lib/shapes");
 const { writeFile } = require("fs/promises");
 
@@ -15,10 +15,19 @@ let questions = [
     {
         name: "textColor",
         type: "input",
-        message: "Give text color",
-        validate: (textColor) =>
-            textColor.length <= 3 || "The text color cannot be more than 3 chars",
+        message: "Give text color",       
     },
+    {
+        name: "logo",
+        type: "list",
+        message: "Give logo",
+        choices: ["triangle", "square", "circle"],  
+    },
+    {
+        name: "logoColor",
+        type: "input",
+        message: "Give logo color",
+    }]
 inquirer.prompt(questions)
     .then(({ text, textColor, logo, logoColor }) => {
         let shape;
@@ -38,8 +47,8 @@ inquirer.prompt(questions)
         shape.setColor(logoColor);
 
         const newLogo = new Logo();
-        newLogo.setText(text,textColor);
-        newLogo.setShape(logo,logoColor);
+        newLogo.setTxt(text,textColor);
+        newLogo.setShape(shape);
         return writeFile("logo.svg", newLogo.render());
     })
     .then(() => {
@@ -47,4 +56,4 @@ inquirer.prompt(questions)
     })
     .catch((err) => {
         console.log(err);
-    });
+    })
